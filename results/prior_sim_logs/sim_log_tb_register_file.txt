@@ -1,0 +1,8 @@
+  PASS  x0 stays zero after attempted write
+  PASS  basic write-then-read (x5=42)
+  PASS  debug port reads the same value
+  PASS  write-through bypass: read sees the value being written this cycle, not stale data
+-------------------------------------
+register_file unit test: 4 passed, 0 failed
+../tb/tb_register_file.vhd:69:5:@25ns:(report note): REGISTER_FILE TESTBENCH PASSED
+ghdl:info: simulation stopped by --stop-time @200ns

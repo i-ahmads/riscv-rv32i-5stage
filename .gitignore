@@ -1,0 +1,10 @@
+# GHDL / simulation artifacts
+sim/
+*.cf
+work-obj*.cf
+*.o
+
+# Editor / OS
+.vscode/
+*.swp
+.DS_Store

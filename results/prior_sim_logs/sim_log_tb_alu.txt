@@ -1,0 +1,29 @@
+../../src/ieee/v93/numeric_std-body.vhdl:2098:7:@0ms:(assertion warning): NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+  PASS  ADD 5+10
+  PASS  ADD -5+10
+  PASS  ADD 0+0
+  PASS  ADD overflow wrap
+  PASS  SUB 10-5
+  PASS  SUB 5-10
+  PASS  SUB 0-0
+  PASS  SUB underflow wrap
+  PASS  AND 12&10
+  PASS  AND with zero
+  PASS  OR 12|10
+  PASS  OR 0|0
+  PASS  XOR 12^10
+  PASS  XOR self
+  PASS  SLT 5<10 true
+  PASS  SLT 10<5 false
+  PASS  SLT -1<0 true (signed)
+  PASS  SLTU 0xFFFFFFFF<0 false (unsigned)
+  PASS  SLTU 0<0xFFFFFFFF true (unsigned)
+  PASS  SLL 1<<4
+  PASS  SLL 1<<31 (sign bit)
+  PASS  SRL 0x80000000>>4 (zero-fill)
+  PASS  SRA 0x80000000>>4 (sign-fill)
+  PASS  SRA all-ones stays all-ones
+  PASS  SRL all-ones zero-fills top bits
+-------------------------------------
+ALU unit test: 25 passed, 0 failed
+../tb/tb_alu.vhd:100:5:@25ns:(report note): ALU TESTBENCH PASSED

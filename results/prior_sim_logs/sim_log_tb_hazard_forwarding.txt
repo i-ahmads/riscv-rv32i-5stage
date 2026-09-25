@@ -1,0 +1,12 @@
+  PASS  no forward when no address matches
+  PASS  EX/MEM forward on rs1 match
+  PASS  MEM/WB forward on rs2 match
+  PASS  EX/MEM forwarding wins over MEM/WB when both match
+  PASS  x0 is never forwarded as a source
+  PASS  load-use hazard stalls PC/IF-ID and bubbles ID/EX only
+  PASS  no stall when the load's destination isn't actually needed yet
+  PASS  branch taken flushes both IF/ID and ID/EX, without stalling PC
+  PASS  no hazard, no flush: pipeline runs normally
+-------------------------------------
+hazard/forwarding unit test: 9 passed, 0 failed
+../tb/tb_hazard_forwarding.vhd:111:5:@9ns:(report note): HAZARD/FORWARDING TESTBENCH PASSED

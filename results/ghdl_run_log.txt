@@ -1,0 +1,27 @@
+GHDL version: GHDL 4.1.0 (Ubuntu 4.1.0+dfsg-0ubuntu2.1) [Dunoon edition]
+Flags: --std=93 -fsynopsys
+
+############ tb_alu ############
+ALU unit test: 25 passed, 0 failed
+/home/claude/riscv_build/tb/tb_alu.vhd:100:5:@25ns:(report note): ALU TESTBENCH PASSED
+
+############ tb_register_file ############
+register_file unit test: 4 passed, 0 failed
+/home/claude/riscv_build/tb/tb_register_file.vhd:69:5:@25ns:(report note): REGISTER_FILE TESTBENCH PASSED
+
+############ tb_hazard_forwarding ############
+hazard/forwarding unit test: 9 passed, 0 failed
+/home/claude/riscv_build/tb/tb_hazard_forwarding.vhd:111:5:@9ns:(report note): HAZARD/FORWARDING TESTBENCH PASSED
+
+############ tb_cpu_top ############
+Result: 26 passed, 0 failed
+/home/claude/riscv_build/tb/tb_cpu_top.vhd:125:5:@2041ns:(report note): TESTBENCH PASSED - all checks correct
+
+############ tb_cpu_top_idres ############
+Result: 26 passed, 0 failed
+/home/claude/riscv_build/tb/tb_cpu_top_idres.vhd:125:5:@2041ns:(report note): TESTBENCH PASSED - all checks correct
+
+############ tb_worked_example ############
+Result: 3 passed, 0 failed
+/home/claude/riscv_build/tb/tb_worked_example.vhd:168:5:@119ns:(report note): TESTBENCH PASSED - all checks correct
+

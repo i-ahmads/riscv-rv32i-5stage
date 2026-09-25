@@ -1,0 +1,886 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: cpu_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "cpu_top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "cpu_top"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : cpu_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "D:\BRAC\Current\EEE413\ALU_RISCV\riscv_pkg.vhd" into library work
+Parsing package <riscv_pkg>.
+Parsing VHDL file "D:\BRAC\Current\EEE413\ALU_RISCV\register_file.vhd" into library work
+Parsing entity <register_file>.
+Parsing architecture <rtl> of entity <register_file>.
+Parsing VHDL file "D:\BRAC\Current\EEE413\ALU_RISCV\pc_reg.vhd" into library work
+Parsing entity <pc_reg>.
+Parsing architecture <rtl> of entity <pc_reg>.
+Parsing VHDL file "D:\BRAC\Current\EEE413\ALU_RISCV\mem_wb_reg.vhd" into library work
+Parsing entity <mem_wb_reg>.
+Parsing architecture <rtl> of entity <mem_wb_reg>.
+Parsing VHDL file "D:\BRAC\Current\EEE413\ALU_RISCV\load_store_unit.vhd" into library work
+Parsing entity <load_store_unit>.
+Parsing architecture <rtl> of entity <load_store_unit>.
+Parsing VHDL file "D:\BRAC\Current\EEE413\ALU_RISCV\instr_mem.vhd" into library work
+Parsing entity <instr_mem>.
+Parsing architecture <rtl> of entity <instr_mem>.
+Parsing VHDL file "D:\BRAC\Current\EEE413\ALU_RISCV\immediate_gen.vhd" into library work
+Parsing entity <immediate_gen>.
+Parsing architecture <rtl> of entity <immediate_gen>.
+Parsing VHDL file "D:\BRAC\Current\EEE413\ALU_RISCV\if_id_reg.vhd" into library work
+Parsing entity <if_id_reg>.
+Parsing architecture <rtl> of entity <if_id_reg>.
+Parsing VHDL file "D:\BRAC\Current\EEE413\ALU_RISCV\id_ex_reg.vhd" into library work
+Parsing entity <id_ex_reg>.
+Parsing architecture <rtl> of entity <id_ex_reg>.
+Parsing VHDL file "D:\BRAC\Current\EEE413\ALU_RISCV\hazard_detection_unit.vhd" into library work
+Parsing entity <hazard_detection_unit>.
+Parsing architecture <rtl> of entity <hazard_detection_unit>.
+Parsing VHDL file "D:\BRAC\Current\EEE413\ALU_RISCV\forwarding_unit.vhd" into library work
+Parsing entity <forwarding_unit>.
+Parsing architecture <rtl> of entity <forwarding_unit>.
+Parsing VHDL file "D:\BRAC\Current\EEE413\ALU_RISCV\ex_mem_reg.vhd" into library work
+Parsing entity <ex_mem_reg>.
+Parsing architecture <rtl> of entity <ex_mem_reg>.
+Parsing VHDL file "D:\BRAC\Current\EEE413\ALU_RISCV\data_mem.vhd" into library work
+Parsing entity <data_mem>.
+Parsing architecture <rtl> of entity <data_mem>.
+Parsing VHDL file "D:\BRAC\Current\EEE413\ALU_RISCV\control_unit.vhd" into library work
+Parsing entity <control_unit>.
+Parsing architecture <rtl> of entity <control_unit>.
+Parsing VHDL file "D:\BRAC\Current\EEE413\ALU_RISCV\branch_unit.vhd" into library work
+Parsing entity <branch_unit>.
+Parsing architecture <rtl> of entity <branch_unit>.
+Parsing VHDL file "D:\BRAC\Current\EEE413\ALU_RISCV\alu_control.vhd" into library work
+Parsing entity <alu_control>.
+Parsing architecture <rtl> of entity <alu_control>.
+Parsing VHDL file "D:\BRAC\Current\EEE413\ALU_RISCV\alu.vhd" into library work
+Parsing entity <alu>.
+Parsing architecture <rtl> of entity <alu>.
+Parsing VHDL file "D:\BRAC\Current\EEE413\ALU_RISCV\datapath.vhd" into library work
+Parsing entity <datapath>.
+Parsing architecture <rtl> of entity <datapath>.
+Parsing VHDL file "D:\BRAC\Current\EEE413\ALU_RISCV\cpu_top.vhd" into library work
+Parsing entity <cpu_top>.
+Parsing architecture <rtl> of entity <cpu_top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <cpu_top> (architecture <rtl>) from library <work>.
+
+Elaborating entity <datapath> (architecture <rtl>) from library <work>.
+
+Elaborating entity <pc_reg> (architecture <rtl>) from library <work>.
+
+Elaborating entity <instr_mem> (architecture <rtl>) from library <work>.
+
+Elaborating entity <if_id_reg> (architecture <rtl>) from library <work>.
+
+Elaborating entity <control_unit> (architecture <rtl>) from library <work>.
+
+Elaborating entity <immediate_gen> (architecture <rtl>) from library <work>.
+
+Elaborating entity <register_file> (architecture <rtl>) from library <work>.
+
+Elaborating entity <hazard_detection_unit> (architecture <rtl>) from library <work>.
+
+Elaborating entity <id_ex_reg> (architecture <rtl>) from library <work>.
+
+Elaborating entity <forwarding_unit> (architecture <rtl>) from library <work>.
+
+Elaborating entity <alu_control> (architecture <rtl>) from library <work>.
+INFO:HDLCompiler:679 - "D:\BRAC\Current\EEE413\ALU_RISCV\alu_control.vhd" Line 51. Case statement is complete. others clause is never selected
+
+Elaborating entity <alu> (architecture <rtl>) from library <work>.
+
+Elaborating entity <branch_unit> (architecture <rtl>) from library <work>.
+
+Elaborating entity <ex_mem_reg> (architecture <rtl>) from library <work>.
+
+Elaborating entity <data_mem> (architecture <rtl>) from library <work>.
+
+Elaborating entity <load_store_unit> (architecture <rtl>) from library <work>.
+
+Elaborating entity <mem_wb_reg> (architecture <rtl>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <cpu_top>.
+    Related source file is "D:\BRAC\Current\EEE413\ALU_RISCV\cpu_top.vhd".
+    Summary:
+	no macro.
+Unit <cpu_top> synthesized.
+
+Synthesizing Unit <datapath>.
+    Related source file is "D:\BRAC\Current\EEE413\ALU_RISCV\datapath.vhd".
+INFO:Xst:3210 - "D:\BRAC\Current\EEE413\ALU_RISCV\datapath.vhd" line 191: Output port <zero> of the instance <u_alu> is unconnected or connected to loadless signal.
+    Found 32-bit adder for signal <pc_plus4> created at line 1241.
+    Found 32-bit adder for signal <ex_pc_plus_imm> created at line 199.
+    Found 32-bit 4-to-1 multiplexer for signal <ex_operand_a> created at line 49.
+    Found 32-bit 4-to-1 multiplexer for signal <ex_rs2_fwd> created at line 49.
+    Found 32-bit 4-to-1 multiplexer for signal <ex_alu_opA> created at line 49.
+    Found 32-bit 4-to-1 multiplexer for signal <wb_rd_data> created at line 72.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  10 Multiplexer(s).
+Unit <datapath> synthesized.
+
+Synthesizing Unit <pc_reg>.
+    Related source file is "D:\BRAC\Current\EEE413\ALU_RISCV\pc_reg.vhd".
+    Found 32-bit register for signal <pc_r>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <pc_reg> synthesized.
+
+Synthesizing Unit <instr_mem>.
+    Related source file is "D:\BRAC\Current\EEE413\ALU_RISCV\instr_mem.vhd".
+WARNING:Xst:647 - Input <addr<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <addr<31:10>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 256x32-bit Read Only RAM for signal <instr>
+    Summary:
+	inferred   1 RAM(s).
+Unit <instr_mem> synthesized.
+
+Synthesizing Unit <if_id_reg>.
+    Related source file is "D:\BRAC\Current\EEE413\ALU_RISCV\if_id_reg.vhd".
+    Found 32-bit register for signal <pc4_r>.
+    Found 32-bit register for signal <instr_r>.
+    Found 32-bit register for signal <pc_r>.
+    Summary:
+	inferred  96 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <if_id_reg> synthesized.
+
+Synthesizing Unit <control_unit>.
+    Related source file is "D:\BRAC\Current\EEE413\ALU_RISCV\control_unit.vhd".
+    Summary:
+	no macro.
+Unit <control_unit> synthesized.
+
+Synthesizing Unit <immediate_gen>.
+    Related source file is "D:\BRAC\Current\EEE413\ALU_RISCV\immediate_gen.vhd".
+    Summary:
+	no macro.
+Unit <immediate_gen> synthesized.
+
+Synthesizing Unit <register_file>.
+    Related source file is "D:\BRAC\Current\EEE413\ALU_RISCV\register_file.vhd".
+    Found 32x32-bit dual-port RAM <Mram_regs> for signal <regs>.
+    Found 5-bit comparator equal for signal <rs1_addr[4]_rd_addr[4]_equal_4_o> created at line 45
+    Found 5-bit comparator equal for signal <rs2_addr[4]_rd_addr[4]_equal_9_o> created at line 53
+    Summary:
+	inferred   3 RAM(s).
+	inferred   2 Comparator(s).
+	inferred   5 Multiplexer(s).
+Unit <register_file> synthesized.
+
+Synthesizing Unit <hazard_detection_unit>.
+    Related source file is "D:\BRAC\Current\EEE413\ALU_RISCV\hazard_detection_unit.vhd".
+    Found 5-bit comparator equal for signal <if_id_rs1_addr[4]_id_ex_rd_addr[4]_equal_2_o> created at line 23
+    Found 5-bit comparator equal for signal <if_id_rs2_addr[4]_id_ex_rd_addr[4]_equal_3_o> created at line 24
+    Summary:
+	inferred   2 Comparator(s).
+Unit <hazard_detection_unit> synthesized.
+
+Synthesizing Unit <id_ex_reg>.
+    Related source file is "D:\BRAC\Current\EEE413\ALU_RISCV\id_ex_reg.vhd".
+    Found 32-bit register for signal <pc4_out>.
+    Found 32-bit register for signal <rs1_data_out>.
+    Found 32-bit register for signal <rs2_data_out>.
+    Found 32-bit register for signal <imm_out>.
+    Found 32-bit register for signal <pc_out>.
+    Found 5-bit register for signal <rs1_addr_out>.
+    Found 5-bit register for signal <rs2_addr_out>.
+    Found 5-bit register for signal <rd_addr_out>.
+    Found 3-bit register for signal <funct3_out>.
+    Found 2-bit register for signal <op_a_sel_out>.
+    Found 2-bit register for signal <alu_op_out>.
+    Found 2-bit register for signal <result_src_out>.
+    Found 1-bit register for signal <funct7b5_out>.
+    Found 1-bit register for signal <reg_write_out>.
+    Found 1-bit register for signal <mem_read_out>.
+    Found 1-bit register for signal <mem_write_out>.
+    Found 1-bit register for signal <alu_src_out>.
+    Found 1-bit register for signal <branch_out>.
+    Found 1-bit register for signal <jump_out>.
+    Found 1-bit register for signal <is_jalr_out>.
+    Found 1-bit register for signal <is_rtype_out>.
+    Summary:
+	inferred 193 D-type flip-flop(s).
+	inferred  21 Multiplexer(s).
+Unit <id_ex_reg> synthesized.
+
+Synthesizing Unit <forwarding_unit>.
+    Related source file is "D:\BRAC\Current\EEE413\ALU_RISCV\forwarding_unit.vhd".
+    Found 5-bit comparator equal for signal <id_ex_rs1_addr[4]_ex_mem_rd_addr[4]_equal_2_o> created at line 27
+    Found 5-bit comparator equal for signal <id_ex_rs1_addr[4]_mem_wb_rd_addr[4]_equal_4_o> created at line 30
+    Found 5-bit comparator equal for signal <id_ex_rs2_addr[4]_ex_mem_rd_addr[4]_equal_8_o> created at line 38
+    Found 5-bit comparator equal for signal <id_ex_rs2_addr[4]_mem_wb_rd_addr[4]_equal_10_o> created at line 41
+    Summary:
+	inferred   4 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <forwarding_unit> synthesized.
+
+Synthesizing Unit <alu_control>.
+    Related source file is "D:\BRAC\Current\EEE413\ALU_RISCV\alu_control.vhd".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <alu_control> synthesized.
+
+Synthesizing Unit <alu>.
+    Related source file is "D:\BRAC\Current\EEE413\ALU_RISCV\alu.vhd".
+    Found 32-bit adder for signal <a[31]_b[31]_add_0_OUT> created at line 23.
+    Found 32-bit subtractor for signal <GND_17_o_GND_17_o_sub_2_OUT<31:0>> created at line 24.
+    Found 32-bit shifter logical left for signal <a[31]_b[4]_shift_left_9_OUT> created at line 2955
+    Found 32-bit shifter logical right for signal <a[31]_b[4]_shift_right_10_OUT> created at line 2964
+    Found 32-bit shifter arithmetic right for signal <a[31]_b[4]_shift_right_11_OUT> created at line 2982
+    Found 32-bit 12-to-1 multiplexer for signal <res> created at line 22.
+    Found 32-bit comparator greater for signal <b[31]_a[31]_LessThan_6_o> created at line 29
+    Found 32-bit comparator greater for signal <a[31]_b[31]_LessThan_8_o> created at line 35
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+	inferred  10 Multiplexer(s).
+	inferred   3 Combinational logic shifter(s).
+Unit <alu> synthesized.
+
+Synthesizing Unit <branch_unit>.
+    Related source file is "D:\BRAC\Current\EEE413\ALU_RISCV\branch_unit.vhd".
+    Found 1-bit 7-to-1 multiplexer for signal <taken> created at line 21.
+    Found 32-bit comparator equal for signal <b[31]_a[31]_equal_1_o> created at line 23
+    Found 32-bit comparator greater for signal <b[31]_a[31]_LessThan_3_o> created at line 27
+    Found 32-bit comparator greater for signal <a[31]_b[31]_LessThan_5_o> created at line 31
+    Summary:
+	inferred   3 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <branch_unit> synthesized.
+
+Synthesizing Unit <ex_mem_reg>.
+    Related source file is "D:\BRAC\Current\EEE413\ALU_RISCV\ex_mem_reg.vhd".
+    Found 32-bit register for signal <rs2_data_out>.
+    Found 32-bit register for signal <pc4_out>.
+    Found 32-bit register for signal <alu_result_out>.
+    Found 5-bit register for signal <rd_addr_out>.
+    Found 3-bit register for signal <funct3_out>.
+    Found 2-bit register for signal <result_src_out>.
+    Found 1-bit register for signal <reg_write_out>.
+    Found 1-bit register for signal <mem_read_out>.
+    Found 1-bit register for signal <mem_write_out>.
+    Summary:
+	inferred 109 D-type flip-flop(s).
+Unit <ex_mem_reg> synthesized.
+
+Synthesizing Unit <data_mem>.
+    Related source file is "D:\BRAC\Current\EEE413\ALU_RISCV\data_mem.vhd".
+WARNING:Xst:647 - Input <addr<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <addr<31:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <mem_read> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 64x32-bit single-port RAM <Mram_ram> for signal <ram>.
+    Summary:
+	inferred   1 RAM(s).
+Unit <data_mem> synthesized.
+
+Synthesizing Unit <load_store_unit>.
+    Related source file is "D:\BRAC\Current\EEE413\ALU_RISCV\load_store_unit.vhd".
+    Found 6-bit adder for signal <n0079> created at line 41.
+    Found 6-bit adder for signal <n0084> created at line 43.
+    Found 32-bit 6-to-1 multiplexer for signal <load_data> created at line 53.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  38 Multiplexer(s).
+Unit <load_store_unit> synthesized.
+
+Synthesizing Unit <mem_wb_reg>.
+    Related source file is "D:\BRAC\Current\EEE413\ALU_RISCV\mem_wb_reg.vhd".
+    Found 32-bit register for signal <alu_result_out>.
+    Found 32-bit register for signal <pc4_out>.
+    Found 32-bit register for signal <mem_data_out>.
+    Found 5-bit register for signal <rd_addr_out>.
+    Found 2-bit register for signal <result_src_out>.
+    Found 1-bit register for signal <reg_write_out>.
+    Summary:
+	inferred 104 D-type flip-flop(s).
+Unit <mem_wb_reg> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 5
+ 256x32-bit single-port Read Only RAM                  : 1
+ 32x32-bit dual-port RAM                               : 3
+ 64x32-bit single-port RAM                             : 1
+# Adders/Subtractors                                   : 5
+ 32-bit adder                                          : 2
+ 32-bit addsub                                         : 1
+ 6-bit adder                                           : 2
+# Registers                                            : 40
+ 1-bit register                                        : 13
+ 2-bit register                                        : 5
+ 3-bit register                                        : 2
+ 32-bit register                                       : 15
+ 5-bit register                                        : 5
+# Comparators                                          : 13
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greater                             : 4
+ 5-bit comparator equal                                : 8
+# Multiplexers                                         : 91
+ 1-bit 2-to-1 multiplexer                              : 41
+ 1-bit 7-to-1 multiplexer                              : 1
+ 16-bit 2-to-1 multiplexer                             : 1
+ 2-bit 2-to-1 multiplexer                              : 5
+ 3-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 33
+ 32-bit 4-to-1 multiplexer                             : 4
+ 32-bit 6-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 1
+ 5-bit 2-to-1 multiplexer                              : 3
+# Logic shifters                                       : 3
+ 32-bit shifter arithmetic right                       : 1
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <data_mem>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_ram> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 32-bit                    |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <mem_write>     | high     |
+    |     addrA          | connected to signal <addr>          |          |
+    |     diA            | connected to signal <write_data>    |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <data_mem> synthesized (advanced).
+
+Synthesizing (advanced) Unit <instr_mem>.
+INFO:Xst:3217 - HDL ADVISOR - Register <instr_r> currently described with an asynchronous reset, could be combined with distributed RAM <Mram_instr> for implementation on block RAM resources if you made this reset synchronous instead.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 32-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <addr>          |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <instr>         |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_instr> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+Unit <instr_mem> synthesized (advanced).
+
+Synthesizing (advanced) Unit <register_file>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_regs> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <rd_addr>       |          |
+    |     diA            | connected to signal <rd_data>       |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     addrB          | connected to signal <rs1_addr>      |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_regs1> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <rd_addr>       |          |
+    |     diA            | connected to signal <rd_data>       |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     addrB          | connected to signal <rs2_addr>      |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_regs2> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <rd_addr>       |          |
+    |     diA            | connected to signal <rd_data>       |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     addrB          | connected to signal <dbg_addr>      |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <register_file> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 5
+ 256x32-bit single-port distributed Read Only RAM      : 1
+ 32x32-bit dual-port distributed RAM                   : 3
+ 64x32-bit single-port distributed RAM                 : 1
+# Adders/Subtractors                                   : 5
+ 32-bit adder                                          : 2
+ 32-bit addsub                                         : 1
+ 6-bit adder                                           : 2
+# Registers                                            : 534
+ Flip-Flops                                            : 534
+# Comparators                                          : 13
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greater                             : 4
+ 5-bit comparator equal                                : 8
+# Multiplexers                                         : 91
+ 1-bit 2-to-1 multiplexer                              : 41
+ 1-bit 7-to-1 multiplexer                              : 1
+ 16-bit 2-to-1 multiplexer                             : 1
+ 2-bit 2-to-1 multiplexer                              : 5
+ 3-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 33
+ 32-bit 4-to-1 multiplexer                             : 4
+ 32-bit 6-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 1
+ 5-bit 2-to-1 multiplexer                              : 3
+# Logic shifters                                       : 3
+ 32-bit shifter arithmetic right                       : 1
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <alu_op_out_0> (without init value) has a constant value of 0 in block <id_ex_reg>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <result_src_out_0> in Unit <id_ex_reg> is equivalent to the following FF/Latch, which will be removed : <mem_read_out> 
+
+Optimizing unit <cpu_top> ...
+
+Optimizing unit <ex_mem_reg> ...
+
+Optimizing unit <mem_wb_reg> ...
+
+Optimizing unit <datapath> ...
+
+Optimizing unit <register_file> ...
+
+Optimizing unit <if_id_reg> ...
+
+Optimizing unit <id_ex_reg> ...
+
+Optimizing unit <load_store_unit> ...
+
+Optimizing unit <alu> ...
+WARNING:Xst:1293 - FF/Latch <u_datapath/u_if_id_reg/instr_r_19> has a constant value of 0 in block <cpu_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_datapath/u_id_ex_reg/rs1_addr_out_4> (without init value) has a constant value of 0 in block <cpu_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <u_datapath/u_ex_mem_reg/mem_read_out> of sequential type is unconnected in block <cpu_top>.
+WARNING:Xst:1293 - FF/Latch <u_datapath/u_pc_reg/pc_r_0> has a constant value of 0 in block <cpu_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_datapath/u_if_id_reg/pc4_r_0> has a constant value of 0 in block <cpu_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_datapath/u_if_id_reg/pc_r_0> has a constant value of 0 in block <cpu_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_datapath/u_id_ex_reg/pc_out_0> (without init value) has a constant value of 0 in block <cpu_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_datapath/u_id_ex_reg/pc4_out_0> (without init value) has a constant value of 0 in block <cpu_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_datapath/u_ex_mem_reg/pc4_out_0> (without init value) has a constant value of 0 in block <cpu_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_datapath/u_mem_wb_reg/pc4_out_0> (without init value) has a constant value of 0 in block <cpu_top>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <u_datapath/u_id_ex_reg/pc_out_1> in Unit <cpu_top> is equivalent to the following FF/Latch, which will be removed : <u_datapath/u_id_ex_reg/pc4_out_1> 
+INFO:Xst:2261 - The FF/Latch <u_datapath/u_if_id_reg/pc4_r_1> in Unit <cpu_top> is equivalent to the following FF/Latch, which will be removed : <u_datapath/u_if_id_reg/pc_r_1> 
+INFO:Xst:2261 - The FF/Latch <u_datapath/u_if_id_reg/instr_r_1> in Unit <cpu_top> is equivalent to the following FF/Latch, which will be removed : <u_datapath/u_if_id_reg/instr_r_0> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block cpu_top, actual ratio is 2.
+FlipFlop u_datapath/u_mem_wb_reg/rd_addr_out_0 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 520
+ Flip-Flops                                            : 520
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : cpu_top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1893
+#      GND                         : 1
+#      INV                         : 1
+#      LUT1                        : 29
+#      LUT2                        : 35
+#      LUT3                        : 114
+#      LUT4                        : 375
+#      LUT5                        : 374
+#      LUT6                        : 688
+#      MUXCY                       : 165
+#      MUXF7                       : 17
+#      VCC                         : 1
+#      XORCY                       : 93
+# FlipFlops/Latches                : 520
+#      FDC                         : 398
+#      FDCE                        : 122
+# RAMS                             : 53
+#      RAM32M                      : 15
+#      RAM32X1D                    : 6
+#      RAM64X1S                    : 32
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 70
+#      IBUF                        : 6
+#      OBUF                        : 64
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             520  out of  126800     0%  
+ Number of Slice LUTs:                 1720  out of  63400     2%  
+    Number used as Logic:              1616  out of  63400     2%  
+    Number used as Memory:              104  out of  19000     0%  
+       Number used as RAM:              104
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1845
+   Number with an unused Flip Flop:    1325  out of   1845    71%  
+   Number with an unused LUT:           125  out of   1845     6%  
+   Number of fully used LUT-FF pairs:   395  out of   1845    21%  
+   Number of unique control sets:         3
+
+IO Utilization: 
+ Number of IOs:                          71
+ Number of bonded IOBs:                  71  out of    210    33%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 573   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 6.779ns (Maximum Frequency: 147.510MHz)
+   Minimum input arrival time before clock: 0.808ns
+   Maximum output required time after clock: 2.439ns
+   Maximum combinational path delay: 1.758ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.779ns (frequency: 147.510MHz)
+  Total number of paths / destination ports: 30016126 / 1138
+-------------------------------------------------------------------------
+Delay:               6.779ns (Levels of Logic = 40)
+  Source:            u_datapath/u_id_ex_reg/rs1_addr_out_2 (FF)
+  Destination:       u_datapath/u_pc_reg/pc_r_31 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: u_datapath/u_id_ex_reg/rs1_addr_out_2 to u_datapath/u_pc_reg/pc_r_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.361   0.703  u_datapath/u_id_ex_reg/rs1_addr_out_2 (u_datapath/u_id_ex_reg/rs1_addr_out_2)
+     LUT6:I0->O            1   0.097   0.379  u_datapath/u_forwarding_unit/mem_wb_reg_write_id_ex_rs1_addr[4]_AND_32_o4_SW0 (N278)
+     LUT6:I4->O           63   0.097   0.491  u_datapath/u_forwarding_unit/mem_wb_reg_write_id_ex_rs1_addr[4]_AND_32_o4 (u_datapath/u_forwarding_unit/mem_wb_reg_write_id_ex_rs1_addr[4]_AND_32_o)
+     LUT5:I3->O           10   0.097   0.337  u_datapath/Mmux_ex_operand_a121 (u_datapath/ex_operand_a<1>)
+     LUT4:I3->O           13   0.097   0.335  u_datapath/Mmux_ex_alu_opA121 (u_datapath/ex_alu_opA<1>)
+     MUXCY:DI->O           1   0.337   0.000  u_datapath/u_alu/Mmux_res1_rs_cy<1> (u_datapath/u_alu/Mmux_res1_rs_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  u_datapath/u_alu/Mmux_res1_rs_cy<2> (u_datapath/u_alu/Mmux_res1_rs_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  u_datapath/u_alu/Mmux_res1_rs_cy<3> (u_datapath/u_alu/Mmux_res1_rs_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  u_datapath/u_alu/Mmux_res1_rs_cy<4> (u_datapath/u_alu/Mmux_res1_rs_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  u_datapath/u_alu/Mmux_res1_rs_cy<5> (u_datapath/u_alu/Mmux_res1_rs_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  u_datapath/u_alu/Mmux_res1_rs_cy<6> (u_datapath/u_alu/Mmux_res1_rs_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  u_datapath/u_alu/Mmux_res1_rs_cy<7> (u_datapath/u_alu/Mmux_res1_rs_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  u_datapath/u_alu/Mmux_res1_rs_cy<8> (u_datapath/u_alu/Mmux_res1_rs_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  u_datapath/u_alu/Mmux_res1_rs_cy<9> (u_datapath/u_alu/Mmux_res1_rs_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  u_datapath/u_alu/Mmux_res1_rs_cy<10> (u_datapath/u_alu/Mmux_res1_rs_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  u_datapath/u_alu/Mmux_res1_rs_cy<11> (u_datapath/u_alu/Mmux_res1_rs_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  u_datapath/u_alu/Mmux_res1_rs_cy<12> (u_datapath/u_alu/Mmux_res1_rs_cy<12>)
+     XORCY:CI->O           1   0.370   0.295  u_datapath/u_alu/Mmux_res1_rs_xor<13> (u_datapath/u_alu/Mmux_res1_split<13>)
+     LUT5:I4->O            2   0.097   0.561  u_datapath/u_alu/Mmux_res11104_SW0 (N74)
+     LUT6:I2->O            1   0.097   0.000  u_datapath/ex_branch_taken2_SW46_F (N729)
+     MUXF7:I0->O           1   0.277   0.295  u_datapath/ex_branch_taken2_SW46 (N673)
+     LUT6:I5->O            0   0.097   0.000  u_datapath/Mmux_pc_next_A51 (u_datapath/Mmux_pc_next_rs_A<13>)
+     MUXCY:DI->O           1   0.337   0.000  u_datapath/Mmux_pc_next_rs_cy<13> (u_datapath/Mmux_pc_next_rs_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  u_datapath/Mmux_pc_next_rs_cy<14> (u_datapath/Mmux_pc_next_rs_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  u_datapath/Mmux_pc_next_rs_cy<15> (u_datapath/Mmux_pc_next_rs_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  u_datapath/Mmux_pc_next_rs_cy<16> (u_datapath/Mmux_pc_next_rs_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  u_datapath/Mmux_pc_next_rs_cy<17> (u_datapath/Mmux_pc_next_rs_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  u_datapath/Mmux_pc_next_rs_cy<18> (u_datapath/Mmux_pc_next_rs_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  u_datapath/Mmux_pc_next_rs_cy<19> (u_datapath/Mmux_pc_next_rs_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  u_datapath/Mmux_pc_next_rs_cy<20> (u_datapath/Mmux_pc_next_rs_cy<20>)
+     MUXCY:CI->O           1   0.023   0.000  u_datapath/Mmux_pc_next_rs_cy<21> (u_datapath/Mmux_pc_next_rs_cy<21>)
+     MUXCY:CI->O           1   0.023   0.000  u_datapath/Mmux_pc_next_rs_cy<22> (u_datapath/Mmux_pc_next_rs_cy<22>)
+     MUXCY:CI->O           1   0.023   0.000  u_datapath/Mmux_pc_next_rs_cy<23> (u_datapath/Mmux_pc_next_rs_cy<23>)
+     MUXCY:CI->O           1   0.023   0.000  u_datapath/Mmux_pc_next_rs_cy<24> (u_datapath/Mmux_pc_next_rs_cy<24>)
+     MUXCY:CI->O           1   0.023   0.000  u_datapath/Mmux_pc_next_rs_cy<25> (u_datapath/Mmux_pc_next_rs_cy<25>)
+     MUXCY:CI->O           1   0.023   0.000  u_datapath/Mmux_pc_next_rs_cy<26> (u_datapath/Mmux_pc_next_rs_cy<26>)
+     MUXCY:CI->O           1   0.023   0.000  u_datapath/Mmux_pc_next_rs_cy<27> (u_datapath/Mmux_pc_next_rs_cy<27>)
+     MUXCY:CI->O           1   0.023   0.000  u_datapath/Mmux_pc_next_rs_cy<28> (u_datapath/Mmux_pc_next_rs_cy<28>)
+     MUXCY:CI->O           1   0.023   0.000  u_datapath/Mmux_pc_next_rs_cy<29> (u_datapath/Mmux_pc_next_rs_cy<29>)
+     MUXCY:CI->O           0   0.023   0.000  u_datapath/Mmux_pc_next_rs_cy<30> (u_datapath/Mmux_pc_next_rs_cy<30>)
+     XORCY:CI->O           1   0.370   0.000  u_datapath/Mmux_pc_next_rs_xor<31> (u_datapath/pc_next<31>)
+     FDCE:D                    0.008          u_datapath/u_pc_reg/pc_r_31
+    ----------------------------------------
+    Total                      6.779ns (3.383ns logic, 3.396ns route)
+                                       (49.9% logic, 50.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 530 / 530
+-------------------------------------------------------------------------
+Offset:              0.808ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       u_datapath/u_pc_reg/pc_r_31 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to u_datapath/u_pc_reg/pc_r_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           520   0.001   0.458  reset_IBUF (reset_IBUF)
+     FDCE:CLR                  0.349          u_datapath/u_pc_reg/pc_r_1
+    ----------------------------------------
+    Total                      0.808ns (0.350ns logic, 0.458ns route)
+                                       (43.3% logic, 56.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 63 / 63
+-------------------------------------------------------------------------
+Offset:              2.439ns (Levels of Logic = 2)
+  Source:            u_datapath/u_register_file/Mram_regs25 (RAM)
+  Destination:       dbg_data<29> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: u_datapath/u_register_file/Mram_regs25 to dbg_data<29>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAM32M:WCLK->DOC1     1   1.369   0.693  u_datapath/u_register_file/Mram_regs25 (u_datapath/u_register_file/dbg_addr[4]_read_port_13_OUT<29>)
+     LUT6:I0->O            1   0.097   0.279  u_datapath/u_register_file/Mmux_dbg_data221 (dbg_data_29_OBUF)
+     OBUF:I->O                 0.000          dbg_data_29_OBUF (dbg_data<29>)
+    ----------------------------------------
+    Total                      2.439ns (1.466ns logic, 0.973ns route)
+                                       (60.1% logic, 39.9% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 320 / 32
+-------------------------------------------------------------------------
+Delay:               1.758ns (Levels of Logic = 4)
+  Source:            dbg_addr<4> (PAD)
+  Destination:       dbg_data<29> (PAD)
+
+  Data Path: dbg_addr<4> to dbg_data<29>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            49   0.001   0.389  dbg_addr_4_IBUF (dbg_addr_4_IBUF)
+     RAM32M:ADDRA4->DOA1    1   0.299   0.693  u_datapath/u_register_file/Mram_regs23 (u_datapath/u_register_file/dbg_addr[4]_read_port_13_OUT<13>)
+     LUT6:I0->O            1   0.097   0.279  u_datapath/u_register_file/Mmux_dbg_data51 (dbg_data_13_OBUF)
+     OBUF:I->O                 0.000          dbg_data_13_OBUF (dbg_data<13>)
+    ----------------------------------------
+    Total                      1.758ns (0.397ns logic, 1.361ns route)
+                                       (22.6% logic, 77.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    6.779|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 26.00 secs
+Total CPU time to Xst completion: 26.40 secs
+ 
+--> 
+
+Total memory usage is 4702892 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   16 (   0 filtered)
+Number of infos    :   12 (   0 filtered)
+
