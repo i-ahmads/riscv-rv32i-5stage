@@ -1,10 +1,5 @@
 # 5-Stage Pipelined RISC-V (RV32I) Processor — VHDL Implementation
-
-**Course:** EEE413/ECE413 Digital System Design, BRAC University
-**Group:** Group 4, Section 02
-**Members:** Sujana Haque, Intisar Ahmed, Tanvir Jubaer, Satirtha Saha, Mahdi Abrar Yousuf
-
-A classic 5-stage (IF/ID/EX/MEM/WB) pipelined RV32I core, implemented in two functionally-equivalent variants that resolve branches at different pipeline stages, plus a minimal worked-example configuration used for a hand-traceable walkthrough. Verified in GHDL, simulated in Xilinx ISim, and synthesized on Xilinx ISE targeting an Artix-7 FPGA.
+A classic 5-stage (IF/ID/EX/MEM/WB) pipelined RV32I core, implemented in two functionally equivalent variants that resolve branches at different pipeline stages, plus a minimal worked-example configuration used for a hand-traceable walkthrough. Verified in GHDL, simulated in Xilinx ISim, and synthesized on Xilinx ISE targeting an Artix-7 FPGA.
 
 This repository contains source code, testbenches, tooling, and verification/synthesis results only. The written report and slide deck are maintained separately and are not included here.
 
