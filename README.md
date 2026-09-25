@@ -28,11 +28,11 @@ These screenshots are from the supplied ISE and ISim project. Select an image to
 
 ![CPU top-level ISim timing diagram](results/waveforms/cpu_top/1.%20Full%20diagram.JPG)
 
-*ISim capture for the EX-stage CPU testbench. The [cycle close-ups](results/waveforms/cpu_top/) show the execution trace.*
+*ISim capture for the EX-stage CPU testbench. See the [available waveform captures](results/waveforms/) for both CPU variants and selected units.*
 
 ![ID-stage CPU timing diagram](results/waveforms/cpu_top_idres/1.%20full%20diagram.JPG)
 
-*ID-stage branch-resolution waveform. Additional [waveforms](results/waveforms/) cover the ALU, register file, and hazard/forwarding logic.*
+*ID-stage branch-resolution waveform. Additional [waveforms](results/waveforms/) cover the ALU and hazard/forwarding logic.*
 
 ![Xilinx ISE design summary for the EX-stage CPU](results/schematics/design_summary/1.%20Design%20Summary%28cpu_top%29.JPG)
 
